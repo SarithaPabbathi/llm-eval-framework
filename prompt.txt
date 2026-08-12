@@ -1,0 +1,5 @@
+Summarize the following text in one or two sentences. Only include information present in the text.
+
+Text: {{text}}
+
+Summary:

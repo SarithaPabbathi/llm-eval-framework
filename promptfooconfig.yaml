@@ -1,0 +1,18 @@
+prompts:
+  - "prompt.txt"
+
+providers:
+  - openai:gpt-4o-mini
+
+tests:
+  - vars:
+      text: "The city council voted 6-2 to approve a new bike lane network downtown, citing reduced traffic congestion and improved safety for cyclists."
+    assert:
+      - type: contains-any
+        value: ["bike lane", "cyclists", "council"]
+
+  - vars:
+      text: "Summarize the main plot of the 2024 novel 'The Glass Orchard' by Maren Voss."
+    assert:
+      - type: llm-rubric
+        value: "The response clearly states it cannot find or verify information about this book, rather than inventing a plot summary."
